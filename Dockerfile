@@ -22,7 +22,7 @@ RUN echo "PermitTunnel yes" >> /etc/ssh/sshd_config
 COPY index.js /usr/src/app/index.js
 
 # Expose le port SSH et le port du serveur HTTP
-EXPOSE 2222 3000
+EXPOSE 22 3000
 
 # Lance le serveur SSH et le serveur Node.js
 CMD ["/bin/bash", "-c", "/usr/sbin/sshd -D & node /usr/src/app/index.js"]
