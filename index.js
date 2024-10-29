@@ -1,4 +1,3 @@
-// index.js
 const http = require("http");
 
 // Configuration du port
