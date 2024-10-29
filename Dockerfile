@@ -19,5 +19,8 @@ RUN echo "PermitTunnel yes" >> /etc/ssh/sshd_config
 # Expose le port SSH
 EXPOSE 22
 
+# Définit la variable d'environnement PORT pour Render
+ENV PORT 22
+
 # Lance le serveur SSH
 CMD ["/usr/sbin/sshd", "-D"]
